@@ -1,0 +1,267 @@
+@font-face {
+	font-family: 'JDSocial';
+	src:url('fonts/JDSocial_2.eot?gd6mr8');
+	src:url('fonts/JDSocial_2.eot?#iefixgd6mr8') format('embedded-opentype'),
+		url('fonts/JDSocial_2.woff?gd6mr8') format('woff'),
+		url('fonts/JDSocial_2.ttf?gd6mr8') format('truetype'),
+		url('fonts/JDSocial_2.svg?gd6mr8#JDSocial') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+li{ 
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+a{ 
+	text-decoration: none; 
+}
+
+a:hover, a:focus{
+	cursor: pointer; 
+	outline:none; 
+	text-decoration:none; 
+} 
+
+.jd_social_animation_type_ {
+	float: left; 
+	position: relative; 
+	cursor: pointer;
+	width:100%;
+}
+
+.jd_social_animation ul{
+	list-style:none;
+	padding:0px; 
+	margin:0px;
+}
+
+.jd_social_animation ul li{
+	margin:10px 5px; 
+	display:inline-block;
+	position:relative;
+	border-radius:4px;
+	line-height:normal;
+}
+
+.jd_social_animation ul li:last-child{
+	margin-right:0px;
+}
+
+.jd_social_animation ul li a{
+	text-decoration:none;
+	font-size:16px; 
+	color:#fff;
+	display:block;
+	line-height:40px;
+	width:160px;
+	font-weight:600;
+	border-radius:4px;
+	transition:all .5s ease;
+}
+
+.jd_social_animation ul li a span{
+	font-family:lato;
+	margin-left:5px;
+	margin-left:55px;
+	transition:all 0.5s ease;
+}
+
+.jd_social_animation ul li a:hover, 
+.jd_social_animation ul li a:focus{
+	outline:none;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+.jd_social_animation ul li a:after{
+	display:none;
+}
+
+.jd_social_animation ul li a:after, 
+.jd_social_animation ul li a:before{
+	vertical-align:middle;
+	line-height:41px;
+	background:rgba(0,0,0,0.1);
+	left:0px;
+	padding-left:10px;
+	width:30px;
+	position:absolute;
+	font-size:16px;
+	font-weight:400;
+	transition:all 0.5s ease;
+	border-radius:4px 0 0 4px;
+}
+
+.jd_social_animation ul li a:hover:after, 
+.jd_social_animation ul li a:hover:before{
+	background:rgba(0,0,0,0.4);
+}
+
+/*-- content button hover effect --*/ 
+
+/*----- Style_1 -----*/
+
+.hover_1 ul li a{
+	text-align:center;
+	box-shadow:0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.hover_1 ul li a:hover{
+	box-shadow:0 0 5px #333;
+}
+
+.hover_1 ul li a span{
+	margin-left:5px;
+}
+
+.hover_1 ul li a:before, .hover_1 ul li a:hover:before{
+	background:none;
+	padding-left:0px;
+	position:relative;
+}
+
+/*----- Style_2 -----*/
+
+.hover_2 ul li a{
+	position:relative;
+	overflow:hidden;
+}
+
+.hover_2 ul li a:hover{
+	background:#000;
+}
+
+.hover_2 ul li a:after,
+.hover_2 ul li a:hover:before{
+	display:block;
+	top:0px;
+	background:rgba(255, 255, 255, 0.1);
+}
+
+.hover_2 ul li a:hover:after{
+	top:40px;
+}
+
+.hover_2 ul li a:before{
+	top:-40px;	
+}
+
+/*----- Style 3 -----*/
+
+
+.hover_3 ul li{
+	width:auto;
+}
+
+.hover_3 ul li a:hover:before{
+	padding-left:16px;
+	padding-right:4px;
+}
+
+.hover_3 ul li a:hover{
+	width:160px;
+}
+
+.hover_3 ul li a:hover span{
+	margin-left:65px;
+}
+
+/*----- Style 4 -----*/
+
+.hover_4 ul li a:before{
+	text-align:left;
+	transition:all 0.3s ease;
+}
+
+.hover_4 ul li a:hover:before{
+	width:150px;
+	border-radius:4px;
+	background:rgba(0,0,0,0.1);
+}
+
+
+
+/*-- Right check hover --*/
+
+.jd_social_animation:after,.jd_social_row .jd_social_selected.jd_social_just_selected:hover:after{ content: "\e60d";}
+.jd_social_animation_type_:first-child{margin-top:0px!important;width:100%;}
+.jd_social_animation_type_:after { position: absolute; right: 0;top:17px; margin-left: 25px; width: 30px; height: 30px; line-height: 30px;  color: rgba( 255, 255, 255, 0 ); z-index: -1; background-color: rgba(147, 154, 170, 0); -webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; text-align:center;}
+.jd_social_animation_type_:hover:after{ color: rgba( 255, 255, 255, 1 ); background-color: rgba(147, 154, 170, 1)}
+
+.jd_social_animation_type_.jd_social_selected:after {color: rgba( 255, 255, 255, 1 ); background-color: rgba(134, 215, 0, 1); }
+
+
+/*-- icon theme --*/ 
+
+.facebook{background:#395aa1; }
+.twitter{background:#3c9cd8; }
+.linkedin{background:#0c78b9; }
+.pinterest{background:#d0202b; } 
+
+/* .facebook:hover{ background:#284686; }
+.twitter:hover{ background:#267caa; }
+.linkedin:hover{ background:#005f93; }
+.pinterest:hover{ background:#9c070e; } */
+
+.facebook{font-family: JDSocial;color:#fff;}
+.facebook a:before, .facebook a:after{ content: "\e63f";}
+.twitter{font-family: JDSocial;color:#fff;}
+.twitter a:before, .twitter a:after{ content: "\e640"; }
+.linkedin{font-family: JDSocial;color:#fff;}
+.linkedin a:before, .linkedin a:after{ content: "\e631";}
+.pinterest{font-family: JDSocial;color:#fff;}
+.pinterest a:before, .pinterest a:after{ content: "\e63a";} 
+.dribbble{background-color: #f85993;font-family: JDSocial;color:#fff;}
+.dribbble a:before, .dribbble a:after{content: "\e638"; }
+.googleplus{ background-color: #BE3F2B;font-family: JDSocial;color:#fff;}
+.googleplus a:before, .googleplus a:after{ content: "\e62f"; }
+.rss{background-color: #ff9845;font-family: JDSocial;color:#fff;}
+.friendfeed{ background-color: #5989C0;font-family: JDSocial;color:#fff;}
+.friendfeed a:before, .friendfeed a:after{ content: "\e61f"; }
+.buffer{ background-color: #222222;font-family: JDSocial;color:#fff;}
+.buffer a:before, .buffer a:after{ content:"\e614";}
+.digg{ background-color: #546B9F;font-family: JDSocial;color:#fff;}
+.digg a:before, .digg a:after{content: "\e61d"; }
+.evernote{ background-color: #7cbf4b;font-family: JDSocial;color:#fff;}
+.evernote a:before, .evernote a:after{ content: "\e61e"; }
+.youtube{ background-color: #e74c3c;font-family: JDSocial;color:#fff;}
+.livejournal{ background-color: #336697;font-family: JDSocial;color:#fff;}
+.livejournal a:before, .livejournal a:after{ content: "\e621"; }
+.hackernews{ background-color: #F08641;font-family: JDSocial;color:#fff;}
+.hackernews a:before, .hackernews a:after{ content: "\e620"; }
+.newsvine{ background-color: #0D642E;font-family: JDSocial;color:#fff;}
+.newsvine a:before, .newsvine a:after{ content: "\e623"; }
+.aol{ background-color: #222222;font-family: JDSocial;color:#fff;}
+.aol a:before, .aol a:after{ content: "\e624"; }
+.gmail{ background-color: #DD4B39;font-family: JDSocial;color:#fff;}
+.gmail a:before, .gmail a:after{ content: "\e625"; }
+.printfriendly{ background-color: #75AA33;font-family: JDSocial;color:#fff;}
+.printfriendly a:before, .printfriendly a:after{ content: "\e627"; }
+.yahoomail{ background-color: #511295;font-family: JDSocial;color:#fff;}
+.yahoomail a:before, .yahoomail a:after{ content: "\e62b"; }
+.amazon{ background-color: #F3A847;font-family: JDSocial;color:#fff;}
+.amazon a:before, .amazon a:after{ content: "\e62d"; }
+.delicious{ background-color: #3398FC;font-family: JDSocial;color:#fff;}
+.delicious a:before, .delicious a:after{ content: "\e62e"; }
+.reddit{ background-color: #FC461E;font-family: JDSocial;color:#fff;}
+.reddit a:before, .reddit a:after{ content: "\e628"; }
+.vkontakte{ background-color: #4C75A3;font-family: JDSocial;color:#fff;}
+.vkontakte a:before, .vkontakte a:after{ content: "\e629"; }
+.linkedin{ background-color: #127BB6;font-family: JDSocial;color:#fff;}
+.linkedin a:before, .linkedin a:after{ content: "\e631"; }
+.myspace{ background-color: #3A5998;font-family: JDSocial;color:#fff;}
+.myspace a:before, .myspace a:after{ content: "\e632"; }
+.blogger{ background-color: #F59038;font-family: JDSocial;color:#fff;}
+.blogger a:before, .blogger a:after{ content: "\e636"; }
+.stumbleupon{ background-color: #EA4B24;font-family: JDSocial;color:#fff;}
+.stumbleupon a:before, .stumbleupon a:after{ content: "\e63d"; }
+.tumblr{ background-color: #32506D;font-family: JDSocial;color:#fff;}
+.tumblr a:before, .tumblr a:after{ content: "\e63e"; }
+.like{ background-color: #DD4B39;font-family: JDSocial;color:#fff;}
+.like a:before, .like a:after{ content: "\e60e"; }
+
+

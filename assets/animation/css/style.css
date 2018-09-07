@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+/*----- Globel Button Css Start Here-----*/
+
+.icon_container{
+	display:inline-block;
+}
+
+.icon_container ul{
+	list-style:none;
+	padding:0px; 
+	margin:0px;
+}
+
+.icon_container ul li{
+	margin:5px;
+	display:inline-block;
+	position:relative;
+}
+
+.icon_container ul li:first-child{
+	margin-left:0px;
+}
+
+.icon_container ul li:last-child{
+	margin-right:0px;
+}
+
+.icon_container ul li a{
+	text-decoration:none;
+	font-size:18px; 
+	color:#fff;
+	display:block;
+	width:40px;
+	height:40px;
+	line-height:36px;
+	transition:all .5s ease;
+}
+
+.icon_container ul li a span{
+	font-family:lato;
+	margin-left:5px;
+	font-size:16px;
+	margin-left:55px;
+	transition:all 0.5s ease;
+}
+
+.icon_container.with_content ul li a{
+	width:160px;
+	font-weight:600;
+}
+
+.icon_container ul li a:hover, 
+.icon_container ul li a:focus{
+	outline:none;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+.icon_container ul li a:after{
+	display:none;
+}
+
+.icon_container ul li a:after, 
+.icon_container ul li a:before{
+	vertical-align:middle;
+	line-height:40px;
+	background:rgba(0,0,0,0.1);
+	left:0px;
+	padding-left:10px;
+	width:40px;
+	position:absolute;
+	transition:all 0.5s ease;
+}
+
+.icon_container ul li a:hover:after, 
+.icon_container ul li a:hover:before{
+	background:rgba(0,0,0,0.4);
+}
+
+.hover_4.button_radius ul li a:hover:before,
+.hover_3.button_radius ul li a:before{
+	border-radius:4px;
+}
+
+/*-- button_radius --*/
+
+.button_radius ul li a{
+	border-radius:4px; 
+}
+
+.button_radius.with_content ul li a:before{
+	border-radius:4px 0 0 4px;
+}
+
+/*-- button_circle --*/
+
+.button_circle ul li a, 
+.button_circle ul li a:before, 
+.button_circle ul li a:after{
+	border-radius:50%; 
+}
+
+/*----- Globel Button Css end Here-----*/
+
+/*----- Style_1 -----*/
+
+.hover_1 ul li a{
+	text-align:center;
+	box-shadow:0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.hover_1 ul li a:hover{
+	box-shadow:0 0 5px #333;
+}
+
+.hover_1 ul li a span{
+	margin-left:5px;
+}
+
+.hover_1 ul li a:before, .hover_1 ul li a:hover:before{
+	background:none;
+	padding-left:0px;
+	position:relative;
+}
+
+/*----- Style_2 -----*/
+
+.hover_2 ul li a{
+	position:relative;
+	overflow:hidden;
+}
+
+.hover_2 ul li a:hover{
+	background:#000;
+}
+
+.hover_2 ul li a:after,
+.hover_2 ul li a:hover:before{
+	display:block;
+	top:0px;
+	background:rgba(255, 255, 255, 0.1);
+}
+
+.hover_2 ul li a:hover:after{
+	top:40px;
+}
+
+.hover_2 ul li a:before{
+	top:-40px;	
+}
+
+/*----- Style 3 -----*/
+
+
+.hover_3.with_content ul li{
+	width:auto;
+}
+
+.hover_3.with_content ul li a:hover:before, 
+.hover_3.with_content ul li a:hover{
+	width:50px;
+}
+
+.hover_3 ul li a:hover:before{
+	padding-left:15px;
+}
+
+.hover_3.with_content ul li a:hover{
+	width:160px;
+}
+
+.hover_3.with_content ul li a:hover span{
+	margin-left:65px;
+}
+
+/*----- Style 4 -----*/
+
+.hover_4.with_content ul li a:before{
+	text-align:left;
+	padding-left:10px;
+	transition:all 0.3s ease;
+}
+
+.hover_4.with_content ul li a:hover:before{
+	width:100%;
+	background:rgba(0,0,0,0.1);
+}
+
+/*----- Text -----*/
+
+@font-face {
+	font-family:Shadows Into Light;
+	src:url("../fonts/ShadowsIntoLight.ttf");
+}
+.incentive{
+	font-family:Shadows Into Light;
+	font-size:24px;
+	line-height:normal;
+	position:relative;
+}
+
+.incentive:after{
+	content:"";
+	display:block;
+	background:url(../errow-btm.png) no-repeat left top;
+	width:20px;
+	height:45px;
+	position:absolute;
+	top:25px;
+	left:-25px;
+}
