@@ -22,8 +22,12 @@ class JFormFieldK2pagetype extends JFormField
 		 return '<select id="'.$this->id.'" name="'.$this->name.'[]" class="'.$this->class.'" multiple="multiple">
 			<option value="category" '.((in_array("category",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_CATEGORIES").'</option>
 			<option value="item" '.((in_array("item",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_ITEM").'</option>
-			<option value="tag" '.((in_array("tag",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_TAG").'</option>
 			<option value="user" '.((in_array("user",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_USER_PAGE_BLOG").'</option> 
 		</select>'; 
 	} 
 }
+
+/* 
+<option value="tag" '.((in_array("tag",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_TAG").'</option>
+There is no event in tag view page.
+ */

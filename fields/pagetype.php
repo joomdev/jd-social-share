@@ -22,7 +22,6 @@ class JFormFieldPagetype extends JFormField
 		 return '<select id="'.$this->id.'" name="'.$this->name.'[]" class="'.$this->class.'" multiple="multiple">
 			<option value="archive" '.((in_array("archive",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_ARCHIVED_ARTICLES").'</option>
 			<option value="article" '.((in_array("article",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_SINGLE_ARTICLE").'</option>
-			<option value="categories" '.((in_array("categories",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_LIST_ALL_CATEGORIES").'</option>
 			<option value="categoryblog" '.((in_array("categoryblog",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_CATEGORY_BLOG").'</option>
 			<option value="category" '.((in_array("category",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_CATEGORY_LIST").'</option>
 			<option value="featured" '.((in_array("featured",$value)) ? "selected='selected'" : "").'>'.JText::_("JDSOCIALSHARE_FEATURED_ARTICLE").'</option>
