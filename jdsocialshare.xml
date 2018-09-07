@@ -2,13 +2,13 @@
 <extension version="3.5" type="plugin" group="content" method="upgrade">
 	<name>JD Social Share</name>
 	<author>www.joomdev.com</author>
-	<creationDate>Feb 2018</creationDate>
+	<creationDate>March 2018</creationDate>
 	<copyright>Copyright (C) 2008 - 2018 JoomDev.com. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>support@joomdev.com</authorEmail>
 	<authorUrl>http://www.joomdev.com</authorUrl>
-	<version>1.0</version>
-	<description>JD Social Share - Increase your article social share with simple yet attractive and lightweight Joomla social share plugin.</description>
+	<version>1.1</version>
+	<description>JD Social Share</description>
 
 	<files>
 		<filename plugin="jdsocialshare">jdsocialshare.php</filename> 
