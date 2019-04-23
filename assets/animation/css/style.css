@@ -210,3 +210,9 @@
 	top:25px;
 	left:-25px;
 }
+
+@media (max-width: 600px) {
+	.incentive:after {
+		display: none;
+	}
+}
