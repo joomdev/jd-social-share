@@ -310,7 +310,7 @@ class Jdsocial {
 		$class	 = $params->get('botton_shape');
 		$class  .= ($params->get('buttons_format') == 2) ? ($params->get('botton_shape') == "circle" ?  " icon" :  " texticon") : ' icon';
 		return '<li>
-			<a class="popup whatsapp" href="https://wa.me/?text='.$row->title.' '.$shortlink.'">
+			<a class="popup whatsapp" href="https://api.whatsapp.com/send?text='.urlencode($row->title).' '.urlencode($shortlink).'">
 			'.(($params->get('botton_shape') != "circle" ? $button_formate : "")).'
 			</a>
 		</li>';
