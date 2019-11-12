@@ -2,178 +2,139 @@
 <extension version="3.5" type="plugin" group="content" method="upgrade">
 	<name>JD Social Share</name>
 	<author>www.joomdev.com</author>
-	<creationDate>July 2018</creationDate>
-	<copyright>Copyright (C) 2008 - 2018 JoomDev.com. All rights reserved.</copyright>
+	<creationDate>Nov 2019</creationDate>
+	<copyright>Copyright (C) 2008 - 2019 JoomDev.com. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>support@joomdev.com</authorEmail>
 	<authorUrl>http://www.joomdev.com</authorUrl>
-	<version>1.3</version>
+	<version>1.4</version>
 	<description>JD Social Share</description>
 
 	<files>
-		<filename plugin="jdsocialshare">jdsocialshare.php</filename> 
-		<folder plugin="jdsocialshare">assets</folder> 
-		<folder plugin="jdsocialshare">libraries</folder> 
-		<folder plugin="jdsocialshare">language</folder> 
-		<folder plugin="jdsocialshare">fields</folder> 
-		<filename>index.html</filename> 
+		<filename plugin="jdsocialshare">jdsocialshare.php</filename>
+		<folder plugin="jdsocialshare">assets</folder>
+		<folder plugin="jdsocialshare">libraries</folder>
+		<folder plugin="jdsocialshare">language</folder>
+		<folder plugin="jdsocialshare">fields</folder>
+		<filename>index.html</filename>
 	</files>
 
 	<languages folder="/plugins/content/jdsocialshare/language">
 		<language tag="en-GB">language/en-GB/en-GB.plg_content_jdsocialshare.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.plg_content_jdsocialshare.sys.ini</language>
-	</languages> 
-    <updateservers>
-        <server type="extension" priority="1" name="JD Social Share">https://cdn.joomdev.com/extensionupdates/plg-jdsocialshare.xml</server>
-    </updateservers>
+	</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="JD Social Share">https://cdn.joomdev.com/extensionupdates/plg-jdsocialshare.xml</server>
+	</updateservers>
 	<config>
 		<fields name="params" addfieldpath="/plugins/content/jdsocialshare/fields">
-			<fieldset name="basic"> 
-				<field
-                        name="networks"
-                        type="networks"
-						id="select_networks"
-                        default=""
-						required="true"
-                        size="255"
-                        label="JDSOCIALSHARE_SELECT_NETWORKS"
-                        description="JDSOCIALSHARE_SELECT_NETWORKS_DESC">
-                </field>
-				<field
-                        name="url_shorting"
-                        class="btn-group"
-                        type="list"
-						required="true"
-                        label="JDSOCIALSHARE_URL_SHORTING"
-                        default="1"
-                        description="JDSOCIALSHARE_URL_SHORTING_DESC">
-                    <option value="1">bit.ly</option>
-					<option value="2">Goo.gl</option>                    
-                </field>
+			<fieldset name="basic">
+				<field name="networks" type="networks" id="select_networks" default="" required="true" size="255" label="JDSOCIALSHARE_SELECT_NETWORKS" description="JDSOCIALSHARE_SELECT_NETWORKS_DESC">
+				</field>
+				<field name="url_shorting" class="btn-group" type="list" required="true" label="JDSOCIALSHARE_URL_SHORTING" default="1" description="JDSOCIALSHARE_URL_SHORTING_DESC">
+					<option value="1">bit.ly</option>
+					<option value="2">Goo.gl</option>
+				</field>
 
-				<field  type="text" name="bitly_username" default=""  showon="url_shorting:1" label="JDSOCIALSHARE_BITLYUSERNAME" description="JDSOCIALSHARE_BITLYUSERNAME_DESC" />
-				<field  type="text" name="user_access_token" default="" showon="url_shorting:1" label="JDSOCIALSHARE_BITLYAPIKEY" description="JDSOCIALSHARE_BITLYAPIKEY_DESC" />
-				 <field  type="text" name="googl_key" default=""  showon="url_shorting:2" label="JDSOCIALSHARE_GOOUSERNAME" description="JDSOCIALSHARE_GOOUSERNAME_DESC" />
-				<field type="spacer" name="bitly_spacer" class="text" showon="url_shorting:1"  label="JDSOCIALSHARE_BITLY_API_KEY_MESSAGE" />
-				<field type="spacer" name="google_spacer" class="text"  showon="url_shorting:2" label="JDSOCIALSHARE_GOOUSERNAME_API_KEY_MESSAGE" />
-				<field  type="text" name="twitter_handler" default="" value="" label="JDSOCIALSHARE_TWITTER_HANDLER" description="JDSOCIALSHARE_TWITTER_HANDLER_DESC" />
-				<field
-                        name="buttons_format"
-                        class="btn-group"
-                        type="radio"
-						required="true"
-                        label="JDSOCIALSHARE_BUTTONS_FORMAT"
-                        default="1"
-                        description="JDSOCIALSHARE_BUTTONS_FORMAT_DESC">
-                    <option value="1">JDSOCIALSHARE_ICON_ONLY</option>
-					<option value="2">JDSOCIALSHARE_TEXT_AND_ICONS</option>  
-                </field>				
-				<field
-                        name="botton_shape"
-                        class="btn-group"
-                        type="bottonshape"
-						required="true"
-                        label="JDSOCIALSHARE_BUTTON_SHAPE"
-                        description="JDSOCIALSHARE_BUTTON_SHAPE_DESC"> 
-                </field>
-				<field
-                        name="button_animation"
-                        class="btn-group"
-                        type="buttonanimation"
-						required="true"
-                        label="JDSOCIALSHARE_BUTTON_ANIMATION"
-                        description="JDSOCIALSHARE_BUTTON_ANIMATION_DESC"> 
-                </field> 
-				<field
-                        name="incentive"
-                        class="btn-group"
-                        type="text"
-                        label="JDSOCIALSHARE_SHARE_INCENTIVE"
-                		description="JDSOCIALSHARE_SHARE_INCENTIVE_DESC" /> 
-			</fieldset>  
-			<fieldset name="JDSOCIALSHARE_ARTICLES"> 
-				<field name="buttons_position" type="checkboxes"  description="JDSOCIALSHARE_POSITION_DESC" label="JDSOCIALSHARE_POSITION">
+				<field type="text" name="bitly_username" default="" showon="url_shorting:1" label="JDSOCIALSHARE_BITLYUSERNAME" description="JDSOCIALSHARE_BITLYUSERNAME_DESC" />
+				<field type="text" name="user_access_token" default="" showon="url_shorting:1" label="JDSOCIALSHARE_BITLYAPIKEY" description="JDSOCIALSHARE_BITLYAPIKEY_DESC" />
+				<field type="text" name="googl_key" default="" showon="url_shorting:2" label="JDSOCIALSHARE_GOOUSERNAME" description="JDSOCIALSHARE_GOOUSERNAME_DESC" />
+				<field type="spacer" name="bitly_spacer" class="text" showon="url_shorting:1" label="JDSOCIALSHARE_BITLY_API_KEY_MESSAGE" />
+				<field type="spacer" name="google_spacer" class="text" showon="url_shorting:2" label="JDSOCIALSHARE_GOOUSERNAME_API_KEY_MESSAGE" />
+				<field type="text" name="twitter_handler" default="" value="" label="JDSOCIALSHARE_TWITTER_HANDLER" description="JDSOCIALSHARE_TWITTER_HANDLER_DESC" />
+				<field name="buttons_format" class="btn-group" type="radio" required="true" label="JDSOCIALSHARE_BUTTONS_FORMAT" default="1" description="JDSOCIALSHARE_BUTTONS_FORMAT_DESC">
+					<option value="1">JDSOCIALSHARE_ICON_ONLY</option>
+					<option value="2">JDSOCIALSHARE_TEXT_AND_ICONS</option>
+				</field>
+				<field name="botton_shape" class="btn-group" type="bottonshape" required="true" label="JDSOCIALSHARE_BUTTON_SHAPE" description="JDSOCIALSHARE_BUTTON_SHAPE_DESC">
+				</field>
+				<field name="button_animation" class="btn-group" type="buttonanimation" required="true" label="JDSOCIALSHARE_BUTTON_ANIMATION" description="JDSOCIALSHARE_BUTTON_ANIMATION_DESC">
+				</field>
+				<field name="incentive" class="btn-group" type="text" label="JDSOCIALSHARE_SHARE_TEXT" description="JDSOCIALSHARE_SHARE_TEXT_DESC" />
+			</fieldset>
+			<fieldset name="JDSOCIALSHARE_ARTICLES">
+				<field name="buttons_position" type="checkboxes" description="JDSOCIALSHARE_POSITION_DESC" label="JDSOCIALSHARE_POSITION">
 					<option value="beforecontent">JDSOCIALSHARE_BEFORE_CONTENT</option>
 					<option value="aftercontent">JDSOCIALSHARE_AFTER_CONTENT</option>
-				</field>  
+				</field>
 
 				<field name="pagetype_option" type="radio" label="JDSOCIALSHARE_PAGE_TYPE" description="JDSOCIALSHARE_PAGE_TYPE_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
-				<field name="pagetype" showon="pagetype_option:1[OR]pagetype_option:0" type="pagetype" label="JDSOCIALSHARE_SELECT_PAGETYPE" description=""/>				
+				<field name="pagetype" showon="pagetype_option:1[OR]pagetype_option:0" type="pagetype" label="JDSOCIALSHARE_SELECT_PAGETYPE" description=""/>
 
 				<field name="article_categories_option" type="radio" label="JDSOCIALSHARE_CATEGORIES" description="JDSOCIALSHARE_CATEGORIES_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
 				<field name="article_categories" showon="article_categories_option:1[OR]article_categories_option:0" type="category" extension="com_content" label="JDSOCIALSHARE_SELECT_CATEGORY" description="" multiple="multiple" />
 
 				<field name="articles_option" type="radio" label="JDSOCIALSHARE_ARTICLES" description="JDSOCIALSHARE_ARTICLES_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
-				<field name="articles" showon="articles_option:1[OR]articles_option:0" type="articles" label="JDSOCIALSHARE_SELECT_ARTICLE" description="JDSOCIALSHARE_SELECT_ARTICLE_DESC" multiple="multiple" />  
-			</fieldset> 	
+				<field name="articles" showon="articles_option:1[OR]articles_option:0" type="articles" label="JDSOCIALSHARE_SELECT_ARTICLE" multiple="multiple" />
+			</fieldset>
 
-			<fieldset name="JDSOCIALSHARE_K2COMPONENT"> 
-				<field name="k2position" type="checkboxes"  description="JDSOCIALSHARE_POSITION_DESC" label="JDSOCIALSHARE_POSITION">
+			<fieldset name="JDSOCIALSHARE_K2COMPONENT">
+				<field name="k2position" type="checkboxes" description="JDSOCIALSHARE_POSITION_DESC" label="JDSOCIALSHARE_POSITION">
 					<option value="beforecontent">JDSOCIALSHARE_BEFORE_CONTENT</option>
 					<option value="aftercontent">JDSOCIALSHARE_AFTER_CONTENT</option>
 				</field>
 
 				<field name="k2pagetype_option" type="radio" label="JDSOCIALSHARE_PAGE_TYPE" description="JDSOCIALSHARE_PAGE_TYPE_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
-				<field name="k2pagetype" showon="k2pagetype_option:1[OR]k2pagetype_option:0" type="k2pagetype" label="JDSOCIALSHARE_SELECT_PAGETYPE" description=""/>				
+				<field name="k2pagetype" showon="k2pagetype_option:1[OR]k2pagetype_option:0" type="k2pagetype" label="JDSOCIALSHARE_SELECT_PAGETYPE" description=""/>
 
 				<field name="k2categories_option" type="radio" label="JDSOCIALSHARE_CATEGORIES" description="JDSOCIALSHARE_CATEGORIES_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
 				<field name="k2categories" showon="k2categories_option:1[OR]k2categories_option:0" type="k2categories" label="JDSOCIALSHARE_SELECT_CATEGORY" description="" multiple="multiple" />
 
 				<field name="items_option" type="radio" label="JDSOCIALSHARE_K2_ITEMS" description="JDSOCIALSHARE_ARTICLES_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
-				<field name="k2items" showon="items_option:1[OR]items_option:0" type="k2items" label="JDSOCIALSHARE_SELECT_K2_ITEM" description="JDSOCIALSHARE_SELECT_K2_ITEM_DESC" multiple="multiple" />  
+				<field name="k2items" showon="items_option:1[OR]items_option:0" type="k2items" label="JDSOCIALSHARE_SELECT_K2_ITEM" multiple="multiple" />
 			</fieldset>
 
-			<fieldset name="JDSOCIALSHARE_EASYBLOG"> 
-				<field name="ebposition" type="checkboxes"  description="JDSOCIALSHARE_POSITION_DESC" label="JDSOCIALSHARE_POSITION">
+			<fieldset name="JDSOCIALSHARE_EASYBLOG">
+				<field name="ebposition" type="checkboxes" description="JDSOCIALSHARE_POSITION_DESC" label="JDSOCIALSHARE_POSITION">
 					<option value="beforecontent">JDSOCIALSHARE_BEFORE_CONTENT</option>
 					<option value="aftercontent">JDSOCIALSHARE_AFTER_CONTENT</option>
 				</field>
 
 				<field name="ebpagetype_option" type="radio" label="JDSOCIALSHARE_PAGE_TYPE" description="JDSOCIALSHARE_PAGE_TYPE_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
 				<field name="ebpagetype" showon="ebpagetype_option:1[OR]ebpagetype_option:0" type="ebpagetype" label="JDSOCIALSHARE_EASYBLOG_SELECT_PAGETYPE" description=""/>
 
 				<field name="ebcategories_option" type="radio" label="JDSOCIALSHARE_CATEGORIES" description="JDSOCIALSHARE_CATEGORIES_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
 				<field name="ebcategories" showon="ebcategories_option:1[OR]ebcategories_option:0" type="ebcategories" label="JDSOCIALSHARE_SELECT_CATEGORY" description="" multiple="multiple" />
 
 				<field name="ebitems_option" type="radio" label="JDSOCIALSHARE_EASYBLOG_ITEMS" description="JDSOCIALSHARE_EASYBLOG_ITEMS_DESC" class="btn-group">
-				  <option value="">JDSOCIALSHARE_IGNORE</option>
-				  <option value="1">JDSOCIALSHARE_INCLUDE</option>
-				  <option value="0">JDSOCIALSHARE_EXCLUDE</option>
+					<option value="">JDSOCIALSHARE_IGNORE</option>
+					<option value="1">JDSOCIALSHARE_INCLUDE</option>
+					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
-				<field name="ebitems" showon="ebitems_option:1[OR]ebitems_option:0" type="ebitems" label="JDSOCIALSHARE_SELECT_EASYBLOG_ITEM" description="JDSOCIALSHARE_EASYBLOG_ITEMS_DESC" multiple="multiple" />  
+				<field name="ebitems" showon="ebitems_option:1[OR]ebitems_option:0" type="ebitems" label="JDSOCIALSHARE_SELECT_EASYBLOG_ITEM" multiple="multiple" />
 			</fieldset>
 		</fields>
-	</config> 
+	</config>
 </extension>

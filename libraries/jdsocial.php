@@ -1,10 +1,10 @@
 <?php
 /**
- * @package	JD Social Share
- * @version	1.0
- * @author	joomdev.com
- * @copyright	Copyright (C) 2008 - 2018 Joomdev.com. All rights reserved
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package		JD Social Share
+ * @version		1.4
+ * @author		JoomDev
+ * @copyright	Copyright (C) 2008 - 2019 Joomdev.com. All rights reserved
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
  
 defined('_JEXEC') or die;
@@ -34,21 +34,7 @@ class Jdsocial {
 					<a class="popup facebook '.$class.'" href="'.$link.'">'.(($params->get('botton_shape') != "circle" ? $button_formate : "")).'
 					</a> 
 				</li>'; 
-	}	
-
-	public function getGoogleplus($row,$params,$shortlink,$jdlable){
-		
-		$button_formate	 = ($params->get('buttons_format') == 2) ? "<span>$jdlable</span>" : '';
-		$class	 = $params->get('botton_shape');
-		$class  .= ($params->get('buttons_format') == 2) ? ($params->get('botton_shape') == "circle" ?  " icon" :  " texticon") : ' icon';	
-		$title = (isset($row->title)) ? $row->title : '';
-		$link = sprintf( 'https://plus.google.com/share?url=%1$s&t=%2$s', $shortlink,$title);
-		return '<li>
-					<a class="popup googleplus '.$class.'" href="'.$link.'">'.(($params->get('botton_shape') != "circle" ? $button_formate : "")).'
-					</a> 
-				</li>'; 
 	}
-
 	public function getBuffer($row,$params,$shortlink,$jdlable){
 		 $button_formate	 = ($params->get('buttons_format') == 2) ? "<span>$jdlable</span>" : '';
 		 $class	 = $params->get('botton_shape');

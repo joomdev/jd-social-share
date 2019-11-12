@@ -1,10 +1,10 @@
 <?php
 /**
- * @package	JD Social Share
- * @version	1.0
- * @author	joomdev.com
- * @copyright	Copyright (C) 2008 - 2018 Joomdev.com. All rights reserved
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package		JD Social Share
+ * @version		1.4
+ * @author		JoomDev
+ * @copyright	Copyright (C) 2008 - 2019 Joomdev.com. All rights reserved
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('JPATH_PLATFORM') or die;
@@ -12,47 +12,43 @@ JHtml::_('bootstrap.modal');
 
 class JFormFieldNetworks extends JFormField
 {
-    protected $type = 'networks'; 
+	 protected $type = 'networks'; 
 
-    protected function getInput()
+	 protected function getInput()
 	{
-		$value = $this->value;		
+		$value = $this->value;
 		$doc = JFactory::getDocument();
 		$doc->addStyleSheet(JURI::root().'plugins/content/jdsocialshare/assets/jd_admin.css');
-		$doc->addScript(JURI::root().'plugins/content/jdsocialshare/assets/js/jquery-ui.js');		 
-		$doc->addScript(JURI::root().'plugins/content/jdsocialshare/assets/js/admin.js');	
-		$doc->addStyleSheet(JURI::root().'media/jui/css/icomoon.css');		
+		$doc->addScript(JURI::root().'plugins/content/jdsocialshare/assets/js/jquery-ui.js');
+		$doc->addScript(JURI::root().'plugins/content/jdsocialshare/assets/js/admin.js');
+		$doc->addStyleSheet(JURI::root().'media/jui/css/icomoon.css');
 		$shape  = '';
-		
 		$shape .= '<div class="jd_social select_networkpop"><a class="button" data-area="sharing">'.JText::_("JDSOCIALSHARE_UPDATE_SOCIAL_NETWORKS").'</a></div>';
 		$shape .= '<div class="jd_social_networks jd_social_row jd_social_sortable follow_networks_networks_sorting" id="sortable_follow_networks_networks_sorting"></div>';
-		$shape .= '<div class="jd_social_networks jd_social_row jd_social_sortable sharing_networks_networks_sorting ui-sortable" id="sortable_sharing_networks_networks_sorting">';	
-		$networks = json_decode($value);	
-		if(!empty($networks) && is_array($networks)){			
+		$shape .= '<div class="jd_social_networks jd_social_row jd_social_sortable sharing_networks_networks_sorting ui-sortable" id="sortable_sharing_networks_networks_sorting">';
+		$networks = json_decode($value);
+		if(!empty($networks) && is_array($networks)){
 			foreach($networks as $k=>$network){
 				$shape .= '<div class="jd_social_network jd_social_icon ui-sortable-handle tosave" data-name="'.$network->network.'" data-area="sharing_networks_networks_sorting"><i class="icon-move large-icon"></i><span class="jd_social_'.$network->network.'"><a href="javascript:void(0);" class="jd_social_deletenetwork"></a></span><input class="input_label" placeholder="'.$network->label.'" value="'.$network->label.'" name="jd_social[sharing_networks_networks_sorting][label]['.$k.']" type="text"></div>';
 			}
 		}
 		$shape .= '</div>';
-		$shape .= "<input name='".$this->name."'  class='".$this->class."' id='".$this->id."' value='".$value."' type='hidden' />";
-		
-		$shape .= $this->getModal();		  
+		$shape .= "<input name='".$this->name."' class='".$this->class."' id='".$this->id."' value='".$value."' type='hidden' />";
+		$shape .= $this->getModal();
 		return $shape;
 	}
-	
 	protected function getModal(){
 		$selectNetworks = $this->getSelectedNetworks($this->value);
 		$modalbox = '';
 		$modalbox .= '<div class="jd_social_networks_modal sharing" id="networks_container">
 				<div class="jd_social_inner_container">
 					<div class="jd_social_modal_header">
-						<h1>'.JText::_("JDSOCIALSHARE_ADD_SOCIAL_NETWORKS_TO_ADD").'</h1>
-						<span class="jd_social_close"  data-dismiss="modal"></span>
+						<h3>'.JText::_("JDSOCIALSHARE_ADD_SOCIAL_NETWORKS_TO_ADD").'</h3>
+						<span class="jd_social_close" data-dismiss="modal"></span>
 					</div>
 					<div class="social_icons_container sharing_networks_networks_sorting">';
 					$networks = $this->getNetworks();
 					foreach($networks as $nework){
-					
 						$name = $nework['name'];
 						$label = $nework['label'];
 						$placeholder = $nework['placeholder'];
@@ -71,7 +67,7 @@ class JFormFieldNetworks extends JFormField
 						<a href="javascript:void(0);" class="jd_social_apply" data-area="sharing_networks_networks_sorting">'.JText::_("JDSOCIALSHARE_UPDATE").'</a>
 					</div>
 				</div>
-			</div>';			
+			</div>';
 		echo $modalbox;
 	}
 	protected function getNetworks(){
@@ -86,13 +82,6 @@ class JFormFieldNetworks extends JFormField
 						'twitter'=>array(
 								'name'=>'twitter',
 								'label'=>'Twitter',
-								'placeholder'=>'username',
-								'username'=>'false',
-								'api_support'=>'true',
-							),	
-						'googleplus'=>array(
-								'name'=>'googleplus',
-								'label'=>'Google+',
 								'placeholder'=>'username',
 								'username'=>'false',
 								'api_support'=>'true',
@@ -251,18 +240,16 @@ class JFormFieldNetworks extends JFormField
 								'username'=>'false',
 								'api_support'=>'true',
 						),
-					);	 
-					
+					);			
 		}
-
-		protected function getSelectedNetworks($data =  array()){
+		protected function getSelectedNetworks($data = array()){
 			$selected = array();
 			$networks = json_decode($data);
 			if(!empty($networks) && is_array($networks)){
 				foreach(json_decode($data) as $k=>$v){
-					$selected[]  = $v->network; 
+					$selected[] = $v->network;
 				}
 			}
-		   return $selected;		
+			return $selected;
 		}
 }

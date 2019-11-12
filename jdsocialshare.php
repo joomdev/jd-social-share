@@ -1,10 +1,10 @@
 <?php
 /**
- * @package	JD Social Share
- * @version	1.0
- * @author	joomdev.com
- * @copyright	Copyright (C) 2008 - 2018 Joomdev.com. All rights reserved
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @package		JD Social Share
+ * @version		1.4
+ * @author		JoomDev
+ * @copyright	Copyright (C) 2008 - 2019 Joomdev.com. All rights reserved
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
@@ -38,7 +38,7 @@ class PlgContentJdsocialshare extends JPlugin
 		$task 	= JRequest::getVar('task');
 		$jdparams = $this->params;
 		// com_content
-		if(isset($option)  && $option == 'com_content'){
+		if(isset($option) && $option == 'com_content'){
 		
 			$excludesPages = array();
 			$articleType_ = explode('.',$context);
@@ -46,30 +46,27 @@ class PlgContentJdsocialshare extends JPlugin
 			$buttonPosition = $jdparams->get('buttons_position');
 			$pageTypeOption = ($jdparams->get('pagetype_option') == 1 || ($jdparams->get('pagetype_option') != '' && $jdparams->get('pagetype_option') == 0)) ? $jdparams->get('pagetype_option') : 3;
 			$excludesPages = $jdparams->get('pagetype');
-			 
+
 			// exclude/ include for categories		
 			$pageCategoryOption = ($jdparams->get('article_categories_option') == 1 || ($jdparams->get('article_categories_option') != '' && $jdparams->get('article_categories_option') == 0)) ? $jdparams->get('article_categories_option') : 3;
 			$excludesCategories = $jdparams->get('article_categories');
 			$catid = $row->catid;
+
 			// exclude/ include article
 			$pageArticleOption = ($jdparams->get('articles_option') == 1 || ($jdparams->get('articles_option') != '' && $jdparams->get('articles_option') == 0)) ? $jdparams->get('articles_option') : 3;
 			$excludesArticles = $jdparams->get('articles');
-
-		 
 			$aid = (isset($row->id)) ? $row->id : 0; 
 			$contentDisplay = $this->GetDisplayValue($articleType,$pageTypeOption ,$excludesPages,$pageCategoryOption,$excludesCategories,$pageArticleOption,$excludesArticles,$aid,$catid);
 			if($contentDisplay){
-				
 					if(!empty($buttonPosition) && in_array('beforecontent',$buttonPosition)){
 						$html = $this->Template($this->params,$row,false,$context);
 						return $html;
 					}
-				
 			}
 		}
 
 		// com_k2
-		if(isset($option)  && $option == 'com_k2'){		
+		if(isset($option) && $option == 'com_k2'){		
 	 		$k2pageTypeOption = ($jdparams->get('k2pagetype_option') == 1 || ($jdparams->get('k2pagetype_option') != '' && $jdparams->get('k2pagetype_option') == 0)) ? $jdparams->get('k2pagetype_option') : 3;
 			$k2pagetype = $jdparams->get('k2pagetype'); 			
 			$k2categories_option = ($jdparams->get('k2categories_option') == 1 || ($jdparams->get('k2categories_option') != '' && $jdparams->get('k2categories_option') == 0)) ? $jdparams->get('k2categories_option') : 3;
@@ -95,13 +92,12 @@ class PlgContentJdsocialshare extends JPlugin
 						}
 						$html .= $this->Template($this->params,$row,false,$context);
 						return $html;
-					 
-				} 
-			} 
+				}
+			}
 		}
 
 		// com_easyblog
-		if(isset($option)  && $option == 'com_easyblog'){		
+		if(isset($option) && $option == 'com_easyblog'){		
 			$ebpageTypeOption = ($jdparams->get('ebpagetype_option') == 1 || ($jdparams->get('ebpagetype_option') != '' && $jdparams->get('ebpagetype_option') == 0)) ? $jdparams->get('ebpagetype_option') : 3;
 			$ebpagetype = $jdparams->get('ebpagetype'); 			
 
@@ -112,7 +108,7 @@ class PlgContentJdsocialshare extends JPlugin
 
 			$ebitems = $jdparams->get('ebitems');			
 			$ebid = (isset($row->id)) ? $row->id : '';
-			$ebcid = (isset($row->catid)) ? $row->catid : ''; 
+			$ebcid = (isset($row->catid)) ? $row->catid : '';
 			$ebdisplayPage = false;
 			$ebposition = $jdparams->get('ebposition');
 			
@@ -120,7 +116,6 @@ class PlgContentJdsocialshare extends JPlugin
 			
 			if($ebdisplayPage) {
 				if(!empty($ebposition) && in_array('beforecontent',$ebposition)){
-					 	
 						$html = '';
 						$incentive = $jdparams->get('incentive');
 						if($incentive){
@@ -128,16 +123,13 @@ class PlgContentJdsocialshare extends JPlugin
 						}
 						$html .= $this->Template($this->params,$row,false,$context);
 						return $html;
-				 
-				} 
-			}  
-			
-		
+				}
+			}
 		}
-    }
+	}
 
 	public function onContentAfterDisplay($context, &$row, &$params, $page=0)
-    {
+	{
 		//echo $context;exit;
 		$option	 	= JRequest::getVar('option');		
 		$view 		= JRequest::getVar('view');	
@@ -145,9 +137,8 @@ class PlgContentJdsocialshare extends JPlugin
 		$jdparams = $this->params;
 
 		// com_content
-		if(isset($option)  && $option == 'com_content'){
-		  
-			//echo $context;exit;
+		if(isset($option) && $option == 'com_content'){
+		//echo $context;exit;
 		$option	 	= JRequest::getVar('option');		
 		$view 		= JRequest::getVar('view');	
 		$layout 	= JRequest::getVar('layout');	
@@ -160,34 +151,32 @@ class PlgContentJdsocialshare extends JPlugin
 			$articleType = (isset($articleType_[1])) ? $articleType_[1] : '';			
 			$buttonPosition = $jdparams->get('buttons_position');
 			$pageTypeOption = ($jdparams->get('pagetype_option') == 1 || ($jdparams->get('pagetype_option') != '' && $jdparams->get('pagetype_option') == 0)) ? $jdparams->get('pagetype_option') : 3;
-			$excludesPages = $jdparams->get('pagetype');  
-		 
-		 	$pageCategoryOption = ($jdparams->get('article_categories_option') == 1 || ($jdparams->get('article_categories_option') != '' && $jdparams->get('article_categories_option') == 0)) ? $jdparams->get('article_categories_option') : 3;
+			$excludesPages = $jdparams->get('pagetype');
+
+			$pageCategoryOption = ($jdparams->get('article_categories_option') == 1 || ($jdparams->get('article_categories_option') != '' && $jdparams->get('article_categories_option') == 0)) ? $jdparams->get('article_categories_option') : 3;
 			$excludesCategories = $jdparams->get('article_categories');
-			$catid = $row->catid;   
+			$catid = $row->catid;
 			// exclude/ include article
 			$pageArticleOption = ($jdparams->get('articles_option') == 1 || ($jdparams->get('articles_option') != '' && $jdparams->get('articles_option') == 0)) ?$jdparams->get('articles_option') : 3;
 			$excludesArticles = $jdparams->get('articles');
 
-		 
 			$aid = (isset($row->id)) ? $row->id : 0; 
 			$contentDisplay = $this->GetDisplayValue($articleType,$pageTypeOption ,$excludesPages,$pageCategoryOption,$excludesCategories,$pageArticleOption,$excludesArticles ,$aid,$catid);
 			if($contentDisplay){
-					if(!empty($buttonPosition) && in_array('aftercontent',$buttonPosition)){
-						$html = '';
-						$incentive = $jdparams->get('incentive');
-						if($incentive){
-							$html .= '<div class="incentive">'.$jdparams->get('incentive').'</div>';
-						}
-						$html .= $this->Template($this->params,$row,false,$context);
-						return  $html;
+				if(!empty($buttonPosition) && in_array('aftercontent',$buttonPosition)){
+					$html = '';
+					$incentive = $jdparams->get('incentive');
+					if($incentive){
+						$html .= '<div class="incentive">'.$jdparams->get('incentive').'</div>';
 					}
+					$html .= $this->Template($this->params,$row,false,$context);
+					return $html;
+				}
 			}
-		 
 		}
 
 		// com_k2
-		if(isset($option)  && $option == 'com_k2'){	
+		if(isset($option) && $option == 'com_k2'){	
 		
 			$k2pageTypeOption = ($jdparams->get('k2pagetype_option') == 1 || ($jdparams->get('k2pagetype_option') != '' && $jdparams->get('k2pagetype_option') == 0)) ? $jdparams->get('k2pagetype_option') : 3;
 			$k2pagetype = $jdparams->get('k2pagetype'); 			
@@ -201,26 +190,26 @@ class PlgContentJdsocialshare extends JPlugin
 			$k2position = $jdparams->get('k2position');
 			if($view == 'item'){
 				$layout = 'item';
-			} 
+			}
 			
 			$k2displayPage = $this->GetDisplayValue($layout,$k2pageTypeOption,$k2pagetype,$k2categories_option,$k2excludesCategories,$k2itemOption,$excludesItems ,$k2aid,$k2cid);	
 			if($k2displayPage){
 				if(!empty($k2position) && in_array('aftercontent',$k2position)){
-					 	$html = '';
-						$incentive = $jdparams->get('incentive');
-						if($incentive){
-							$html .= '<div class="incentive">'.$jdparams->get('incentive').'</div>';
-						}
-						$html .= $this->Template($this->params,$row,false,$context);
-						return $html;
-				} 
+					$html = '';
+					$incentive = $jdparams->get('incentive');
+					if($incentive){
+						$html .= '<div class="incentive">'.$jdparams->get('incentive').'</div>';
+					}
+					$html .= $this->Template($this->params,$row,false,$context);
+					return $html;
+				}
 			}
 		}
 
 		// com_easyblog		
-		if(isset($option)  && $option == 'com_easyblog'){		
+		if(isset($option) && $option == 'com_easyblog'){		
 			$ebpageTypeOption = ($jdparams->get('ebpagetype_option') == 1 || ($jdparams->get('ebpagetype_option') != '' && $jdparams->get('ebpagetype_option') == 0)) ? $jdparams->get('ebpagetype_option') : 3;
-			$ebpagetype = $jdparams->get('ebpagetype'); 			
+			$ebpagetype = $jdparams->get('ebpagetype');		
 
 			$ebcategories_option = ($jdparams->get('ebcategories_option') == 1 || ($jdparams->get('ebcategories_option') != '' && $jdparams->get('ebcategories_option') == 0)) ? $jdparams->get('ebcategories_option') : 3;
 			$ebcategories = $jdparams->get('ebcategories');
@@ -229,7 +218,7 @@ class PlgContentJdsocialshare extends JPlugin
 			
 			$ebitems = $jdparams->get('ebitems');			
 			$ebid = (isset($row->id)) ? $row->id : '';
-			$ebcid = (isset($row->catid)) ? $row->catid : ''; 
+			$ebcid = (isset($row->catid)) ? $row->catid : '';
 			$ebdisplayPage = false;
 			$ebposition = $jdparams->get('ebposition');
 			
@@ -237,24 +226,20 @@ class PlgContentJdsocialshare extends JPlugin
 			
 			if($ebdisplayPage) {
 				if(!empty($ebposition) && in_array('beforecontent',$ebposition)){
-					 	
-						$html = '';
-						$incentive = $jdparams->get('incentive');
-						if($incentive){
-							$html .= '<div class="incentive">'.$jdparams->get('incentive').'</div>';
-						}
-						$html .= $this->Template($this->params,$row,false,$context);
-						return $html;
-					 
-				} 
-			}  
+					$html = '';
+					$incentive = $jdparams->get('incentive');
+					if($incentive){
+						$html .= '<div class="incentive">'.$jdparams->get('incentive').'</div>';
+					}
+					$html .= $this->Template($this->params,$row,false,$context);
+					return $html;
+				}
+			}
+		}
+	}
 
-		} 
-    }
-	
-	
-	/* 
-	*   FUNCTION CREATED FOR DISPLAY OF ICONS ON PAGES BASED ON SELECTION IN BACKEND 
+	/*
+	* FUNCTION CREATED FOR DISPLAY OF ICONS ON PAGES BASED ON SELECTION IN BACKEND
 	*	
 	*/
 	
@@ -263,13 +248,13 @@ class PlgContentJdsocialshare extends JPlugin
 				// PAGE TYPE SELECTION
 				switch($PAGE_TYPE_OPTION){
 						case 0 : 
-							if(!empty($PAGE_TYPE) && in_array($VIEW_PAGE,$PAGE_TYPE)){ 
+							if(!empty($PAGE_TYPE) && in_array($VIEW_PAGE,$PAGE_TYPE)){
 								$ebdisplayPage1 = 0;
 							}else{				
 								$ebdisplayPage1 = 1;
 							} 
 						break;
-						case 1 : 
+						case 1 :
 							if((!empty($PAGE_TYPE) && in_array($VIEW_PAGE,$PAGE_TYPE))){
 								$ebdisplayPage1 = 1;
 								
@@ -278,19 +263,19 @@ class PlgContentJdsocialshare extends JPlugin
 							}	
 						break;
 						
-						default :  
+						default :
 							$ebdisplayPage1 = 0;
 					}
 				// CATEGORY SELECTION	
 					switch($CATEGORY_OPTION){
-						case 0 : 
-							if(!empty($CATEGORY_ID) && in_array($CATEGORY_ID,$CATEGORIES)){ 
+						case 0 :
+							if(!empty($CATEGORY_ID) && in_array($CATEGORY_ID,$CATEGORIES)){
 								$ebdisplayPage2 = 0;
 							}else{				
 								$ebdisplayPage2 = 1;
 							} 
 						break;
-						case 1 : 
+						case 1 :
 							if((!empty($CATEGORY_ID) && in_array($CATEGORY_ID,$CATEGORIES))){
 								$ebdisplayPage2 = 1;
 								
@@ -299,20 +284,20 @@ class PlgContentJdsocialshare extends JPlugin
 							}	
 						break;
 						
-						default :  
+						default :
 							$ebdisplayPage2 = 0;
 						}
 						
-					// ITEM SELECTION 	
+					// ITEM SELECTION
 					switch($ITEM_OPTION){
-					case 0 : 
-						if(!empty($ITEM_ID) && in_array($ITEM_ID,$ITEMS)){ 
+					case 0 :
+						if(!empty($ITEM_ID) && in_array($ITEM_ID,$ITEMS)){
 							$ebdisplayPage3 = 0;
 						}else{				
 							$ebdisplayPage3 = 1;
 						} 
 					break;
-					case 1 : 
+					case 1 :
 						if((!empty($ITEM_ID) && in_array($ITEM_ID,$ITEMS))){
 							$ebdisplayPage3 = 1;
 							
@@ -321,20 +306,18 @@ class PlgContentJdsocialshare extends JPlugin
 						}	
 					break;
 					
-					default :  
+					default :
 						$ebdisplayPage3 = 0;
 					}
 								
-					//echo  $ebdisplayPage1 .'  '. $ebdisplayPage2 .'  '. $ebdisplayPage3;
+					//echo $ebdisplayPage1 .' '. $ebdisplayPage2 .' '. $ebdisplayPage3;
 					return $ebdisplayPage1 || $ebdisplayPage2 || $ebdisplayPage3;
-					
+				
 	}
-	
 	/* 
-	*  FUNCTION CREATES THE ICONS TEMPLATE DISPLAYED ON FRONTEND 
-	*  
+	* FUNCTION CREATES THE ICONS TEMPLATE DISPLAYED ON FRONTEND 
+	*
 	*/
-	
 	protected function Template(&$params,$row, $trigger = false,$context){	
 		require_once JPATH_BASE . '/components/com_content/helpers/route.php';
 		$jdsocial = new Jdsocial;
@@ -362,46 +345,46 @@ class PlgContentJdsocialshare extends JPlugin
 			$link = $jURI->toString();
 		}
 		if($jdparams->get('url_shorting') == 1){
-			$shortlink = $this->getBitlyShortUrl($link); 
+			$shortlink = $this->getBitlyShortUrl($link);
 		}else{
 			$shortlink = $this->getGooglShortUrl($link);
-			//$shortlink = $link; 
+			//$shortlink = $link;
 		}
 		
 		$networks = $jdparams->get('networks');
-		$html  = ''; 
+		$html = ''; 
 		$buttonClass = ($jdparams->get('buttons_format') == 2) ? (($jdparams->get('botton_shape') != 'circle') ? 'button_'.$jdparams->get('botton_shape').' with_content' : 'button_'.$jdparams->get('botton_shape')) : 'button_'.$jdparams->get('botton_shape');
 		$buttonAnimation = 'hover_'.$jdparams->get('button_animation');
-		$html  .= '<div class="icon_container '.$buttonClass.' '.$buttonAnimation.'"><ul>';
+		$html .= '<div class="icon_container '.$buttonClass.' '.$buttonAnimation.'"><ul>';
 
 		if(!empty($networks) && is_array(json_decode($networks))){
 				foreach(json_decode($networks) as $network){
 					$jdnetwork = (isset($network->network)) ? 'get'.ucfirst($network->network) : '';
-					$jdlable   = (isset($network->label)) ? $network->label : '';
-					$html  .= $jdsocial->$jdnetwork($row,$this->params,$shortlink,$jdlable);									
+					$jdlable = (isset($network->label)) ? $network->label : '';
+					$html .= $jdsocial->$jdnetwork($row,$this->params,$shortlink,$jdlable);									
 				}
-				$html  .= '</ul></div>';	
+				$html .= '</ul></div>';	
 			return $html;
 		}else{
 			return '';
-		} 
+		}
 	}
 	
 	/* ******************************************************************** */
 	
 	
 	/*
-	*  FUNCTION TO CREATE SORT LINK FOR TEH LINK PASSED . 
-	*  USING THE BITLY URL SORNING API .
+	* FUNCTION TO CREATE SORT LINK FOR TEH LINK PASSED . 
+	* USING THE BITLY URL SORNING API .
 	*/
 		
 	function getBitlyShortUrl($url,$format = 'xml',$version = '2.0.1')
 	{
 		$user_login = $this->params->get('bitly_username');
-		$user_access_token = $this->params->get('user_access_token');  
+		$user_access_token = $this->params->get('user_access_token');
 		
 		if($user_access_token && $user_login){
-			$bitly  =  new Bitly;
+			$bitly = new Bitly;
 			$params = array();
 			$params['access_token'] = $user_access_token;
 			$params['longUrl'] = $url;
@@ -433,9 +416,6 @@ class PlgContentJdsocialshare extends JPlugin
 		}else{
 			return $longUrl;
 		}
-	}	
-	
+	}
 	/* ************************************************** ***************/
-	
-	
 }

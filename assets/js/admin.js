@@ -13,12 +13,10 @@ jQuery( document ).ready( function() {
 		jQuery( this ).removeClass( 'jd_social_nonselectednetwork' ).addClass( 'jd_social_selectednetwork' );
 		return false;
 	});
-
 	jQuery( 'body' ).on( 'click', '.jd_social_selectednetwork', function(){
 		jQuery( this ).removeClass( 'jd_social_selectednetwork' ).addClass( 'jd_social_nonselectednetwork jd_social_deselected' );
 		return false;
 	});
-	
 	jQuery( 'body' ).on( 'click', '.jd_social_apply', function(){
 		$this_el = jQuery( this );
 		$network_container = jQuery( this ).parent().parent();
@@ -73,7 +71,7 @@ jQuery( document ).ready( function() {
 		return false;
 	}); 
 	
-	 Joomla.submitbutton = function(task)
+	Joomla.submitbutton = function(task)
 	{
 		if(task == 'plugin.apply' || task == 'plugin.save'){
 			if(jQuery('.tosave').length > 0){
@@ -94,8 +92,7 @@ jQuery( document ).ready( function() {
 		}		
 		Joomla.submitform(task, document.getElementById('style-form'));
 		return true;
-	} 
-	
+	}
 	var ul_sortable = jQuery('.ui-sortable');
     ul_sortable.sortable({
         revert: 100,
@@ -108,8 +105,6 @@ jQuery( document ).ready( function() {
 		if(selectedtype == 'circle'){
 			jQuery('input:radio[name="jform[params][buttons_format]"]').removeAttr("checked");
 			jQuery('label[for="jform_params_buttons_format0"]').trigger('click');
-		} 
+		}
 	})
-			
-		
 });
