@@ -16,7 +16,7 @@ class Jdsocial {
 		$class	 = $params->get('botton_shape');
 		$class  .= ($params->get('buttons_format') == 2) ? ($params->get('botton_shape') == "circle" ?  " icon" :  " texticon") : ' icon';
 		return '<li>
-					<a class="popup twitter '.$class.'" href="http://twitter.com/share?text='.$row->title.'&url='.$shortlink.$handler.'">
+					<a class="popup twitter '.$class.'" href="http://twitter.com/share?text='.urlencode($row->title).'&url='.$shortlink.$handler.'">
 					'.(($params->get('botton_shape') != "circle" ? $button_formate : "")).'
 					</a> 
 				</li>'; 
