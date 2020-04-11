@@ -355,7 +355,7 @@ class PlgContentJdsocialshare extends JPlugin
 		$html = ''; 
 		$buttonClass = ($jdparams->get('buttons_format') == 2) ? (($jdparams->get('botton_shape') != 'circle') ? 'button_'.$jdparams->get('botton_shape').' with_content' : 'button_'.$jdparams->get('botton_shape')) : 'button_'.$jdparams->get('botton_shape');
 		$buttonAnimation = 'hover_'.$jdparams->get('button_animation');
-		$html .= '<div class="icon_container '.$buttonClass.' '.$buttonAnimation.'"><ul>';
+		$html .= '<div class="jd-social-share icon_container '.$buttonClass.' '.$buttonAnimation.'"><ul>';
 
 		if(!empty($networks) && is_array(json_decode($networks))){
 				foreach(json_decode($networks) as $network){
