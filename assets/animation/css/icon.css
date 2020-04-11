@@ -20,247 +20,247 @@
 	font-style: normal;
 }
 
-.dribbble:after {
+.icon_container .dribbble:after {
 	content: "\e638";
 }
 
-.rss {
+.icon_container .rss {
 	background-color: #ff9845;
 	font-family: JDSocial;
 }
 
 /*.linkedin{font-family: JDSocial; color:#fff;}*/
-.pinterest {
+.icon_container .pinterest {
 	font-family: JDSocial;
 	background-color: #fe4445;
 }
 
-.pinterest:after,
-.pinterest:before {
+.icon_container .pinterest:after,
+.icon_container .pinterest:before {
 	content: "\e63a";
 }
 
-.friendfeed {
+.icon_container .friendfeed {
 	background-color: #5989C0;
 	font-family: JDSocial;
 }
 
-.friendfeed:after,
-.friendfeed:before {
+.icon_container .friendfeed:after,
+.icon_container .friendfeed:before {
 	content: "\e61f";
 }
 
-.buffer {
+.icon_container .buffer {
 	background-color: #222222;
 	font-family: JDSocial;
 }
 
-.buffer:after,
-.buffer:before {
+.icon_container .buffer:after,
+.icon_container .buffer:before {
 	content: "\e614";
 }
 
-.digg {
+.icon_container .digg {
 	background-color: #546B9F;
 	font-family: JDSocial;
 }
 
-.digg:after,
-.digg:before {
+.icon_container .digg:after,
+.icon_container .digg:before {
 	content: "\e61d";
 }
 
-.evernote {
+.icon_container .evernote {
 	background-color: #7cbf4b;
 	font-family: JDSocial;
 }
 
-.evernote:after,
-.evernote:before {
+.icon_container .evernote:after,
+.icon_container .evernote:before {
 	content: "\e61e";
 }
 
-.youtube {
+.icon_container .youtube {
 	background-color: #e74c3c;
 	font-family: JDSocial;
 }
 
-.livejournal {
+.icon_container .livejournal {
 	background-color: #336697;
 	font-family: JDSocial;
 }
 
-.livejournal:after,
-.livejournal:before {
+.icon_container .livejournal:after,
+.icon_container .livejournal:before {
 	content: "\e621";
 }
 
-.hackernews {
+.icon_container .hackernews {
 	background-color: #F08641;
 	font-family: JDSocial;
 }
 
-.hackernews:after,
-.hackernews:before {
+.icon_container .hackernews:after,
+.icon_container .hackernews:before {
 	content: "\e620";
 }
 
-.newsvine {
+.icon_container .newsvine {
 	background-color: #0D642E;
 	font-family: JDSocial;
 }
 
-.newsvine:after,
-.newsvine:before {
+.icon_container .newsvine:after,
+.icon_container .newsvine:before {
 	content: "\e623";
 }
 
-.aol {
+.icon_container .aol {
 	background-color: #222222;
 	font-family: JDSocial;
 }
 
-.aol:after,
-.aol:before {
+.icon_container .aol:after,
+.icon_container .aol:before {
 	content: "\e624";
 }
 
-.gmail {
+.icon_container .gmail {
 	background-color: #DD4B39;
 	font-family: JDSocial;
 }
 
-.gmail:after,
-.gmail:before {
+.icon_container .gmail:after,
+.icon_container .gmail:before {
 	content: "\e625";
 }
 
-.printfriendly {
+.icon_container .printfriendly {
 	background-color: #75AA33;
 	font-family: JDSocial;
 }
 
-.printfriendly:after,
-.printfriendly:before {
+.icon_container .printfriendly:after,
+.icon_container .printfriendly:before {
 	content: "\e627";
 }
 
-.yahoomail {
+.icon_container .yahoomail {
 	background-color: #511295;
 	font-family: JDSocial;
 }
 
-.yahoomail:after,
-.yahoomail:before {
+.icon_container .yahoomail:after,
+.icon_container .yahoomail:before {
 	content: "\e62b";
 }
 
-.amazon {
+.icon_container .amazon {
 	background-color: #F3A847;
 	font-family: JDSocial;
 }
 
-.amazon:after,
-.amazon:before {
+.icon_container .amazon:after,
+.icon_container .amazon:before {
 	content: "\e62d";
 }
 
-.delicious {
+.icon_container .delicious {
 	background-color: #3398FC;
 	font-family: JDSocial;
 }
 
-.delicious:after,
-.delicious:before {
+.icon_container .delicious:after,
+.icon_container .delicious:before {
 	content: "\e62e";
 }
 
-.reddit {
+.icon_container .reddit {
 	background-color: #FC461E;
 	font-family: JDSocial;
 }
 
-.reddit:after,
-.reddit:before {
+.icon_container .reddit:after,
+.icon_container .reddit:before {
 	content: "\e628";
 }
 
-.vkontakte {
+.icon_container .vkontakte {
 	background-color: #4C75A3;
 	font-family: JDSocial;
 }
 
-.vkontakte:after,
-.vkontakte:before {
+.icon_container .vkontakte:after,
+.icon_container .vkontakte:before {
 	content: "\e629";
 }
 
-.linkedin {
+.icon_container .linkedin {
 	font-family: JDSocial;
 	color: #fff;
 }
 
-.linkedin:after,
-.linkedin:before {
+.icon_container .linkedin:after,
+.icon_container .linkedin:before {
 	content: "\e631";
 }
 
-.myspace {
+.icon_container .myspace {
 	background-color: #3A5998;
 	font-family: JDSocial;
 }
 
-.myspace:after,
-.myspace:before {
+.icon_container .myspace:after,
+.icon_container .myspace:before {
 	content: "\e632";
 }
 
-.blogger {
+.icon_container .blogger {
 	background-color: #F59038;
 	font-family: JDSocial;
 }
 
-.blogger:after,
-.blogger:before {
+.icon_container .blogger:after,
+.icon_container .blogger:before {
 	content: "\e636";
 }
 
-.stumbleupon {
+.icon_container .stumbleupon {
 	background-color: #EA4B24;
 	font-family: JDSocial;
 }
 
-.stumbleupon:after,
-.stumbleupon:before {
+.icon_container .stumbleupon:after,
+.icon_container .stumbleupon:before {
 	content: "\e63d";
 }
 
-.tumblr {
+.icon_container .tumblr {
 	background-color: #32506D;
 	font-family: JDSocial;
 }
 
-.tumblr:after,
-.tumblr:before {
+.icon_container .tumblr:after,
+.icon_container .tumblr:before {
 	content: "\e63e";
 }
 
-.like {
+.icon_container .like {
 	background-color: #DD4B39;
 	font-family: JDSocial;
 }
 
-.like:after,
-.like:before {
+.icon_container .like:after,
+.icon_container .like:before {
 	content: "\e60e";
 }
 
-.twitter:after,
-.twitter:before {
+.icon_container .twitter:after,
+.icon_container .twitter:before {
 	content: "\e640";
 }
 
-.twitter {
+.icon_container .twitter {
 	font-family: JDSocial;
 	color: #fff;
 	background: #3c9cd8;
@@ -268,8 +268,8 @@
 
 /*whatsapp icon code*/
 
-[class^="icon-"],
-[class*=" icon-"] {
+.icon_container [class^="icon-"],
+.icon_container [class*=" icon-"] {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icomoon';
 	speak: none;
@@ -284,134 +284,134 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.whatsapp:after,
-.whatsapp:before {
+.icon_container .whatsapp:after,
+.icon_container .whatsapp:before {
 	content: "\ea93";
 	font-family: 'icomoon' !important;
 }
 
-.whatsapp {
+.icon_container .whatsapp {
 	background-color: #2cb742;
 }
 
-.facebook {
+.icon_container .facebook {
 	font-family: JDSocial;
 	color: #fff;
 	background: #395aa1;
 }
 
-.facebook:after,
-.facebook:before {
+.icon_container .facebook:after,
+.icon_container .facebook:before {
 	content: "\e63f";
 }
 
-.friendfeed {
+.icon_container .friendfeed {
 	background-color: #5989C0;
 	font-family: JDSocial;
 }
 
-.buffer {
+.icon_container .buffer {
 	background-color: #222222;
 	font-family: JDSocial;
 }
 
-.digg {
+.icon_container .digg {
 	background-color: #546B9F;
 	font-family: JDSocial;
 }
 
-.evernote {
+.icon_container .evernote {
 	background-color: #7cbf4b;
 	font-family: JDSocial;
 }
 
-.youtube {
+.icon_container .youtube {
 	background-color: #e74c3c;
 	font-family: JDSocial;
 }
 
-.livejournal {
+.icon_container .livejournal {
 	background-color: #336697;
 	font-family: JDSocial;
 }
 
-.hackernews {
+.icon_container .hackernews {
 	background-color: #F08641;
 	font-family: JDSocial;
 }
 
-.newsvine {
+.icon_container .newsvine {
 	background-color: #0D642E;
 	font-family: JDSocial;
 }
 
-.aol {
+.icon_container .aol {
 	background-color: #222222;
 	font-family: JDSocial;
 }
 
-.gmail {
+.icon_container .gmail {
 	background-color: #DD4B39;
 	font-family: JDSocial;
 }
 
-.printfriendly {
+.icon_container .printfriendly {
 	background-color: #75AA33;
 	font-family: JDSocial;
 }
 
-.yahoomail {
+.icon_container .yahoomail {
 	background-color: #511295;
 	font-family: JDSocial;
 }
 
-.amazon {
+.icon_container .amazon {
 	background-color: #F3A847;
 	font-family: JDSocial;
 }
 
-.delicious {
+.icon_container .delicious {
 	background-color: #3398FC;
 	font-family: JDSocial;
 }
 
-.reddit {
+.icon_container .reddit {
 	background-color: #FC461E;
 	font-family: JDSocial;
 }
 
-.vkontakte {
+.icon_container .vkontakte {
 	background-color: #4C75A3;
 	font-family: JDSocial;
 }
 
-.linkedin {
+.icon_container .linkedin {
 	font-family: JDSocial;
 	color: #fff;
 	background-color: #127BB6
 }
 
-.myspace {
+.icon_container .myspace {
 	background-color: #3A5998;
 	font-family: JDSocial;
 }
 
-.blogger {
+.icon_container .blogger {
 	background-color: #F59038;
 	font-family: JDSocial;
 }
 
-.stumbleupon {
+.icon_container .stumbleupon {
 	background-color: #EA4B24;
 	font-family: JDSocial;
 }
 
-.tumblr {
+.icon_container .tumblr {
 	background-color: #32506D;
 	font-family: JDSocial;
 }
 
-.like {
+.icon_container .like {
 	background-color: #DD4B39;
 	font-family: JDSocial;
 }
