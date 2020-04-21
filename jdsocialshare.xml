@@ -2,12 +2,12 @@
 <extension version="3.5" type="plugin" group="content" method="upgrade">
 	<name>JD Social Share</name>
 	<author>www.joomdev.com</author>
-	<creationDate>Nov 2019</creationDate>
-	<copyright>Copyright (C) 2008 - 2019 JoomDev.com. All rights reserved.</copyright>
+	<creationDate>April 2020</creationDate>
+	<copyright>Copyright (C) 2008 - 2020 JoomDev.com. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>support@joomdev.com</authorEmail>
 	<authorUrl>http://www.joomdev.com</authorUrl>
-	<version>1.4</version>
+	<version>1.5</version>
 	<description>JD Social Share</description>
 
 	<files>
