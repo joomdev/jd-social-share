@@ -37,7 +37,8 @@ class JFormFieldNetworks extends JFormField
 		$shape .= $this->getModal();
 		return $shape;
 	}
-	protected function getModal(){
+	
+	protected function getModal() {
 		$selectNetworks = $this->getSelectedNetworks($this->value);
 		$modalbox = '';
 		$modalbox .= '<div class="jd_social_networks_modal sharing" id="networks_container">

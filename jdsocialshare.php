@@ -15,11 +15,12 @@ class PlgContentJdsocialshare extends JPlugin
 {
 	public function __construct(& $subject, $config)
 	{
-		$option = JRequest::getVar('option');		
-		$view = JRequest::getVar('view');		
+		$uri   = new \Joomla\Uri\Uri(JURI::root());
+		$option = $uri->getVar('option');
+		$view = $uri->getVar('view');
 		JHtml::_('jquery.framework');
 		$app = JFactory::getApplication();
-		if(!$app->isAdmin()){
+		if(!$app->isClient('administrator')){
 			$document = JFactory::getDocument();
 			$document->addStyleSheet(JURI::root().'plugins/content/jdsocialshare/assets/animation/css/icon.css', 'text/css');
 			$document->addStyleSheet(JURI::root().'plugins/content/jdsocialshare/assets/animation/css/style.css', 'text/css');
