@@ -63,6 +63,7 @@
 					<option value="1">JDSOCIALSHARE_INCLUDE</option>
 					<option value="0">JDSOCIALSHARE_EXCLUDE</option>
 				</field>
+				
 				<field name="pagetype" showon="pagetype_option:1[OR]pagetype_option:0" type="pagetype" label="JDSOCIALSHARE_SELECT_PAGETYPE" description=""/>
 
 				<field name="article_categories_option" type="radio" label="JDSOCIALSHARE_CATEGORIES" description="JDSOCIALSHARE_CATEGORIES_DESC" class="btn-group">

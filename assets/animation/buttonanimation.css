@@ -203,7 +203,6 @@ a:focus {
 	height: 30px;
 	line-height: 30px;
 	color: rgba(255, 255, 255, 0);
-	z-index: -1;
 	background-color: rgba(147, 154, 170, 0);
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;

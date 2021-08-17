@@ -45,7 +45,7 @@ class JFormFieldNetworks extends JFormField
 				<div class="jd_social_inner_container">
 					<div class="jd_social_modal_header">
 						<h3>'.JText::_("JDSOCIALSHARE_ADD_SOCIAL_NETWORKS_TO_ADD").'</h3>
-						<span class="jd_social_close" data-dismiss="modal"></span>
+						<span class="jd_social_close" data-bs-dismiss="modal" aria-label="Close"></span>
 					</div>
 					<div class="social_icons_container sharing_networks_networks_sorting">';
 					$networks = $this->getNetworks();

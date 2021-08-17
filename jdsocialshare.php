@@ -33,10 +33,11 @@ class PlgContentJdsocialshare extends JPlugin
 
 	public function onContentBeforeDisplay($context, &$row, &$params, $page=0)
     {
-		$option	 	= JRequest::getVar('option');
-		$view 		= JRequest::getVar('view');
-		$layout 	= JRequest::getVar('layout');
-		$task 	= JRequest::getVar('task');
+		$jinput = JFactory::getApplication()->input;
+		$option = $jinput->get('option');
+		$view = $jinput->get('view');
+		$layout = $jinput->get('layout');
+		$task = $jinput->get('task');
 		$jdparams = $this->params;
 		// com_content
 		if(isset($option) && $option == 'com_content'){
@@ -131,21 +132,19 @@ class PlgContentJdsocialshare extends JPlugin
 
 	public function onContentAfterDisplay($context, &$row, &$params, $page=0)
 	{
-		//echo $context;exit;
-		$option	 	= JRequest::getVar('option');		
-		$view 		= JRequest::getVar('view');	
-		$layout 	= JRequest::getVar('layout');	
+		$jinput = JFactory::getApplication()->input;
+		$option	 	= $jinput->get('option');		
+		$view 		= $jinput->get('view');	
+		$layout 	= $jinput->get('layout');	
 		$jdparams = $this->params;
 
 		// com_content
-		if(isset($option) && $option == 'com_content'){
-		//echo $context;exit;
-		$option	 	= JRequest::getVar('option');		
-		$view 		= JRequest::getVar('view');	
-		$layout 	= JRequest::getVar('layout');	
-		$jdparams = $this->params;
-
-		// com_content
+		if(isset($option) && $option == 'com_content') {
+		
+			$option	 	= $jinput->get('option');		
+			$view 		= $jinput->get('view');	
+			$layout 	= $jinput->get('layout');	
+			$jdparams = $this->params;
 	
 			$excludesPages = array();
 			$articleType_ = explode('.',$context);
@@ -319,12 +318,20 @@ class PlgContentJdsocialshare extends JPlugin
 	* FUNCTION CREATES THE ICONS TEMPLATE DISPLAYED ON FRONTEND 
 	*
 	*/
-	protected function Template(&$params,$row, $trigger = false,$context){	
-		require_once JPATH_BASE . '/components/com_content/helpers/route.php';
+	protected function Template(&$params,$row, $trigger = false,$context) {
+
+		if( ( ( new JVersion() )::MAJOR_VERSION ) < 4 ) {
+			require_once JPATH_BASE . '/components/com_content/helpers/route.php';
+		} else {
+			print_r(JPATH_BASE . '/components/com_content/Helper/RouteHelper.php');
+			require_once JPATH_BASE . '/components/com_content/src/Helper/RouteHelper.php';
+		}
+
 		$jdsocial = new Jdsocial;
 		$app = JFactory::getApplication();
+		$jinput = JFactory::getApplication()->input;
 		$active = $app -> getMenu() -> getActive();
-		$Itemid = JRequest::getVar( "Itemid" , "1" );
+		$Itemid = $jinput->get( "Itemid" , "1" );
 		$jdparams = $this->params;
 		if ( $row->id ) {
 				$link = JURI::getInstance();

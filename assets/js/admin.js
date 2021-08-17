@@ -7,7 +7,7 @@ jQuery( document ).ready( function() {
 		$this_el.closest('.jd_social_network').remove(); 		
 	});	
 	jQuery(document).on( 'click','.select_networkpop', function(){
-		jQuery('#networks_container').modal();
+		jQuery('#networks_container').show();
 	});
 	jQuery( 'body' ).on( 'click', '.jd_social_nonselectednetwork', function(){
 		jQuery( this ).removeClass( 'jd_social_nonselectednetwork' ).addClass( 'jd_social_selectednetwork' );
@@ -17,6 +17,11 @@ jQuery( document ).ready( function() {
 		jQuery( this ).removeClass( 'jd_social_selectednetwork' ).addClass( 'jd_social_nonselectednetwork jd_social_deselected' );
 		return false;
 	});
+
+	jQuery( 'body' ).on( 'click', '.jd_social_close', function() {
+		jQuery('#networks_container').hide();
+	});
+	
 	jQuery( 'body' ).on( 'click', '.jd_social_apply', function(){
 		$this_el = jQuery( this );
 		$network_container = jQuery( this ).parent().parent();
@@ -67,7 +72,7 @@ jQuery( document ).ready( function() {
 		
 		jsonString = JSON.stringify(jsonObj);
 		jQuery('#jform_params_select_networks').val(jsonString); 
-		jQuery('#networks_container').modal('hide');
+		jQuery('#networks_container').hide();
 		return false;
 	}); 
 	
