@@ -323,7 +323,6 @@ class PlgContentJdsocialshare extends JPlugin
 		if( ( ( new JVersion() )::MAJOR_VERSION ) < 4 ) {
 			require_once JPATH_BASE . '/components/com_content/helpers/route.php';
 		} else {
-			print_r(JPATH_BASE . '/components/com_content/Helper/RouteHelper.php');
 			require_once JPATH_BASE . '/components/com_content/src/Helper/RouteHelper.php';
 		}
 
